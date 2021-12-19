@@ -1,2 +1,3 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int number = Int32.Parse(Console.ReadLine());
+Console.WriteLine(number * number);
+
