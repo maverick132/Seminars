@@ -11,8 +11,8 @@ if (numberString.Contains("-"))
 
 if (numberString.Length > 2)
 {
-    int number = int.Parse(numberString);
-    Console.Write("Третья цифра данного числа: " + int.Parse(numberString).ToString()[2]);
+    
+    Console.Write("Третья цифра данного числа: " + numberString[2]);
 }
 else
 {
