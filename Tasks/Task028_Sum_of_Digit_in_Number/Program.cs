@@ -3,7 +3,7 @@ int SumDigit(int number)
 {
     if (number < 10) return number;
     else {
-        int lastDigit = number % 2;
+        int lastDigit = number % 10;
         number /= 10;
         return lastDigit + SumDigit(number);
     }
@@ -11,5 +11,5 @@ int SumDigit(int number)
 
 
 Console.WriteLine("Введите число:");
-int number = Convert.ToInt32(Console.ReadLine() ?? String.Empty);
-Console.WriteLine($"Сумма всех цифр числа {number} равна {SumDigit(number)}");
+int numb = Convert.ToInt32(Console.ReadLine() ?? String.Empty);
+Console.WriteLine($"Сумма всех цифр числа {numb} равна {SumDigit(numb)}");
