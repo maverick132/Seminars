@@ -1,9 +1,8 @@
 ﻿// Задать массив из 8 элементов и вывести их на экран 
 void FillArray(int[] array, int minNumber = 0, int maxNumber = 9)
 {
-    int lenght = array.Length;
     Random rnd = new Random();
-    for (int i = 0; i < lenght; i++)
+    for (int i = 0; i < array.Length; i++)
     {
         array[i] = rnd.Next(minNumber, maxNumber + 1);
     }
@@ -13,11 +12,11 @@ void FillArray(int[] array, int minNumber = 0, int maxNumber = 9)
 
 void PrintArray(int[] array)
 {
-    int lenght = array.Length;
 
-    for (int i = 0; i < lenght; i++)
+    for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}, ");
+        if (i != array.Length - 1) Console.Write($"{array[i]}, ");
+        else Console.Write($"{array[i]}.");
     }
     Console.WriteLine();
 }
