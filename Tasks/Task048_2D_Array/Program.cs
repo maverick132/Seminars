@@ -27,7 +27,12 @@ void PrintArray(int[,] array)
     Console.WriteLine();
 }
 
-int[,] array = new int[4,3];
+Console.WriteLine("Введите количество строк");
+int m = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Введите количество столбцов");
+int n = Convert.ToInt32(Console.ReadLine());
+int[,] array = new int[m,n];
+
 FillArray(array);
 PrintArray(array);
 
