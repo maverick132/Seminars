@@ -3,7 +3,7 @@
 void FillArray2D(int[,] array, int minNumber = 0, int maxNumber = 9) //Заполнение двумерного   массива  MxN по спирали
 {
     Random rnd = new Random();
-    int count = 0;
+    int numberRectangle = 0;
 
     int M = array.GetLength(0);
     int N = array.GetLength(1);
@@ -16,15 +16,16 @@ void FillArray2D(int[,] array, int minNumber = 0, int maxNumber = 9) //Запо�
     {
         array[i, j] = number;
 
-        if (i == count && j < N - count - 1) j++;
-        else if (j == N - count - 1 && i < M - count - 1) i++;
-        else if (i == M - count - 1 && j > count) j--;
+        if (i == numberRectangle && j < N - numberRectangle - 1) j++;
+        else if (j == N - numberRectangle - 1 && i < M - numberRectangle - 1) i++;
+        else if (i == M - numberRectangle - 1 && j > numberRectangle) j--;
         else i--;
 
-        if (i == count + 1 && j == count && count != N - count - 1) 
+        if (i == numberRectangle + 1 && j == numberRectangle && numberRectangle != N - numberRectangle - 1) 
+        // Переходим к следующему прямоугольнику если достигли в текущем второй строки, первого столбца и мы не чертим последниц столбец 
         {
-            count++;
-        }
+            numberRectangle++;
+        }   
         number++;
 
     }
